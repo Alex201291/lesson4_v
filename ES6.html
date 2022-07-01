@@ -44,7 +44,31 @@
 -->
 <script>
   "use strict";
+//ES6 Первое Задание
+  class Product {
+    constructor(name, price){
+      this.name = name;
+      this.price = price;
+    }
 
+    makeDiscount25(){
+      this.price = this.price - this.price * 0.25;
+    }
+  }
+
+  const product1 = new Product('Apple', 15000);
+  const product2 = new Product('Pineaplle', 30000);
+  const product3 = new Product('Strawberry', 50000);
+
+  product1.makeDiscount25(15000); //11250
+  product2.makeDiscount25(30000); //22500
+
+  console.dir(product1);
+  console.dir(product2);
+
+// ---------
+
+//ES6 Второе задание
 class Post{
   constructor(author, text){
     this.author = author;

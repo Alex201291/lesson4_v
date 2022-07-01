@@ -45,6 +45,33 @@
 <script>
 "use strict";
 
+ //ES5 первое Задание
+ function Product(name, price){
+    this.name = name;
+    this.price = price;
+  }
+
+  Product.prototype.makeDiscount25 = function(){
+    this.price = this.price - this.price * 0.25;
+  };
+
+  const product1 = new Product('Banana', 500);
+  const product2 = new Product('Apple', 1000);
+  const product3 = new Product('Pineapple', 5000);
+
+  product1.makeDiscount25(); //'Banana', 375;
+  product2.makeDiscount25(); // 'Apple', 750;
+  product3.makeDiscount25(); // 'Pineapple', 3750;
+
+  console.dir(product1);
+  console.dir(product2);
+  console.dir(product3);
+
+
+// ---------
+
+
+//Второе задание
 function Post(author, text){
   this.author = author;
   this.text = text;
